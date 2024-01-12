@@ -1,0 +1,85 @@
+1{
+    name: 'Aggron'
+    type: 'Metal'
+    img: "https://images.pokemontcg.io/hgss4/1_hires.png"
+}
+{
+    "name": "Weedle",
+    "types": [
+        "Grass"
+      ],
+    "large": "https://images.pokemontcg.io/xy5/1_hires.png",
+}
+{
+    "name": "Ampharos",
+    "types": [
+        "Lightning"
+      ],
+    "large": "https://images.pokemontcg.io/dp3/1_hires.png"
+}
+{
+    "name": "Bulbasaur",
+    "types": [
+        "Grass"
+      ],
+    "large": "https://images.pokemontcg.io/det1/1_hires.png"
+}
+{
+    "name": "Dratini",
+    "types": [
+        "Dragon"
+      ],
+    "large": "https://images.pokemontcg.io/dv1/1_hires.png"
+}
+{
+    "name": "Caterpie",
+    "types": [
+        "Grass"
+      ],
+    "large": "https://images.pokemontcg.io/mcd19/1_hires.png"
+}
+{
+    "name": "Absol G",
+    "types": [
+        "Darkness"
+      ],
+    "large": "https://images.pokemontcg.io/pl3/1_hires.png"
+}
+{
+    "name": "Arcanine",
+    "types": [
+        "Fire"
+      ],
+    "large": "https://images.pokemontcg.io/hgss1/1_hires.png"
+}
+{
+    "name": "Blastoise",
+    "types": [
+        "Water"
+      ],
+    "large": "https://images.pokemontcg.io/dp3/2_hires.png"
+}
+
+
+
+
+<Flex direction={'column'}>
+            <Flex mb={'50px'} alignItems={'center'} mt={7} >
+                <Text fontSize={'xl'} fontWeight={600} color={'blue'} mr={1} >{cardAmount}</Text>
+                <Flex direction={'column'} alignItems={'center'}> 
+                    {/* {!total  ?  */}
+                    <ChevronUpIcon color={'blue'} boxSize={6} _hover={{cursor: 'pointer'}} onClick={() => {toIncrease(card)}} /> 
+                    {/* : 
+                    <CloseIcon color={'red'} boxSize={3} mb={1} />
+                    } */}
+
+                    {cardAmount > 0 ? 
+                    <ChevronDownIcon color={'blue'} boxSize={6} _hover={{cursor: 'pointer'}} onClick={toDecrease} />
+                    : 
+                    <CloseIcon color={'red'} boxSize={3} mt={1} />
+                    }
+                </Flex>
+            </Flex>
+            <Text fontSize={'18px'} fontWeight={600}> price</Text>
+            <Text fontSize={'lg'} fontWeight={600} color={'blue'} mr={1} >${priceAmount}</Text>
+        </Flex>
